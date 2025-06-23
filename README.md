@@ -34,11 +34,11 @@ pip install .
 
 ## 2 Data Preparation
 1. Please refer to the tutorial of [3D-VisTA](https://github.com/3d-vista/3D-VisTA?tab=readme-ov-file), download and extract the ScanQA dataset.
-2. download the annotation of our work from [link]().
+2. download the annotation of our work from [coarse_ground_train_5.json](https://huggingface.co/JianuoZ/HCNQA/blob/main/coarse_ground_train_5.json) and [coarse_ground_val_5.json](https://huggingface.co/JianuoZ/HCNQA/blob/main/coarse_ground_val_5.json).
 
 ## 3 CKPT Download
 1. Download the ckpt for language encoder(bert-base-uncased).
-2. Download the ckpt for our model from [link]().
+2. Download the ckpt for our model from [eqa_235_5x5_ft5_2389.pth](https://huggingface.co/JianuoZ/HCNQA/blob/main/eqa_235_5x5_ft5_2389.pth).
 
 ## 3 Training
 ```bash

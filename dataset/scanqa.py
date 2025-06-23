@@ -54,8 +54,8 @@ class ScanQADataset(Dataset, LoadScannetMixin, DataAugmentationMixin):
         
         # load file (add our anno)
         # anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/qa/ScanQA_v1.0_' + split + ".json")
-        # anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/cg/coarse_ground_' + split + "_5" + ".json") # 我们的原来的val
-        anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/cg/coarse_ground_' + split + "_5_rule" + ".json") # 规则替换v1 val
+        anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/cg/coarse_ground_' + split + "_5" + ".json") # 我们的原来的val
+        # anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/cg/coarse_ground_' + split + "_5_rule" + ".json") # 规则替换v1 val
         # anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/cg/coarse_ground_' + split + "_5_rule_v2" + ".json") # 规则替换v2 val (换的更多，还没测)
         # anno_file = os.path.join(SCAN_FAMILY_BASE, 'annotations/qa/ScanQA_v1.0_' + split + "_rule" + ".json") # 规则替换v1 test_w_obj
         print(f"loading anno_file in: {anno_file}")
