@@ -1,0 +1,233 @@
+Running on host: titanvgpu01
+Start time: Thu Jun 12 17:34:50 CST 2025
+which python: /home/zhengf_lab/cse12210702/.conda/envs/3dvista/bin/python
+python version: Python 3.8.16
+conda env: 3dvista
+CUDA version (from nvcc): nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2022 NVIDIA Corporation
+Built on Wed_Jun__8_16:49:14_PDT_2022
+Cuda compilation tools, release 11.7, V11.7.99
+Build cuda_11.7.r11.7/compiler.31442593_0
+Python sys.path: ['', '/home/zhengf_lab/cse12210702/.conda/envs/3dvista/lib/python38.zip', '/home/zhengf_lab/cse12210702/.conda/envs/3dvista/lib/python3.8', '/home/zhengf_lab/cse12210702/.conda/envs/3dvista/lib/python3.8/lib-dynload', '/home/zhengf_lab/cse12210702/.conda/envs/3dvista/lib/python3.8/site-packages', '/home/zhengf_lab/cse12210702/.conda/envs/3dvista/lib/python3.8/site-packages/pointnet2-3.0.0-py3.8-linux-x86_64.egg']
+PyTorch version: 1.12.1
+CUDA available: True
+Device count: 1
+
+List of args:
+{
+    "name": "optimus_prime",
+    "task": "scanqa",
+    "eval_task": true,
+    "restore_model": true,
+    "qa_dataset": {
+        "name": "scanqa_task",
+        "args": {
+            "tokenizer": "bert_tokenizer",
+            "txt_seq_length": 50,
+            "pc_seq_length": 135,
+            "pc_type": "gt"
+        }
+    },
+    "lang_encoder": {
+        "name": "bert_lang_encoder",
+        "args": {
+            "num_hidden_layer": 4
+        }
+    },
+    "point_encoder": {
+        "name": "point_tokenize_encoder",
+        "args": {
+            "backbone": "pointnet++",
+            "hidden_size": 768,
+            "path": null,
+            "freeze_feature": true,
+            "num_attention_heads": 12,
+            "spatial_dim": 5,
+            "num_layers": 4,
+            "dim_loc": 6,
+            "pairwise_rel_type": "center"
+        }
+    },
+    "unified_encoder": {
+        "name": "unified_encoder_v2",
+        "args": {
+            "hidden_size": 768,
+            "num_attention_heads": 12,
+            "num_layers": 4,
+            "dim_loc": 6,
+            "freeze": false
+        }
+    },
+    "ground_head": {
+        "name": "ground_head_v1",
+        "args": {
+            "input_size": 768,
+            "hidden_size": 768,
+            "sem_cls_size": 607,
+            "dropout": 0.3
+        }
+    },
+    "qa_head": {
+        "name": "qa_head_v1",
+        "args": {
+            "num_answers": 8864
+        }
+    },
+    "pretrain_head": {
+        "name": "pretrain_head_v1",
+        "args": {
+            "hidden_size": 768,
+            "vocab_size": 30522
+        }
+    },
+    "caption_head": {
+        "name": "caption_head_v1",
+        "args": {
+            "hidden_size": 768,
+            "vocab_size": 4231
+        }
+    },
+    "supervise_base_head": {
+        "name": "supervise_base_head_v1",
+        "args": {
+            "hidden_size": 768
+        }
+    },
+    "coarse_ground_head": {
+        "name": "coarse_ground_head_v4",
+        "args": {
+            "hidden_size": 768
+        }
+    },
+    "fine_ground_head": {
+        "name": "fine_ground_head_v4",
+        "args": {
+            "hidden_size": 768
+        }
+    },
+    "inference_head": {
+        "name": "inference_head_v4",
+        "args": {
+            "hidden_size": 768
+        }
+    },
+    "qa_loss": {
+        "name": "qa_loss_v1"
+    },
+    "logger": {
+        "name": "tensorboard_logger",
+        "args": {
+            "log_dir": "../runs/"
+        }
+    },
+    "saver": {
+        "name": "model_saver",
+        "args": {
+            "load_dir": "ckpts",
+            "load_name": "eqa_235_5x5_ft7_2383.pth",
+            "save_dir": "ckpts",
+            "save_name": "eval_abl.pth"
+        }
+    },
+    "batch_size": 1,
+    "learning_rate": 1e-06,
+    "grad_norm": 5.0,
+    "epochs": 50,
+    "warmup_steps": 2000,
+    "lang_lr_mul": 0.1,
+    "point_lr_mul": 1.0,
+    "unified_lr_mul": 1.0,
+    "beta1": 0.9,
+    "beta2": 0.98
+}
+
+
+==================================================
+[INFO] Pipeline initialized for task: 'scanqa'
+[INFO] Evaluation mode (eval_task): True
+[INFO] Restore checkpoint path specified: ckpts/eqa_235_5x5_ft7_2383.pth
+==================================================
+
+total answers is 8864
+train unanswerable question 0, answerable question 25563
+finish loading scannet data
+total answers is 8864
+val unanswerable question 0, answerable question 4675
+finish loading scannet data
+total_steps 1278150
+
+==================================================
+[INFO] Attempting to restore model from checkpoint...
+[SUCCESS] Checkpoint dictionary loaded from saver.
+[SUCCESS] Loaded 'lang_encoder' weights.
+[SUCCESS] Loaded 'point_encoder' weights (using partial load).
+[SUCCESS] Loaded 'unified_encoder' weights.
+[SUCCESS] Loaded 'ground_head' weights.
+[SUCCESS] Loaded 'qa_head' weights (using partial load).
+[SUCCESS] Loaded 'pretrain_head' weights.
+[SUCCESS] Loaded 'caption_head' weights.
+[SUCCESS] Loaded 'coarse_ground_head' weights.
+[SUCCESS] Loaded 'fine_ground_head' weights.
+[SUCCESS] Loaded 'inference_head' weights.
+[SUCCESS] Loaded 'supervise_base_head' weights.
+[INFO] Model restoration process finished.
+==================================================
+
+Module                   Total      Trainable
+---------------------------------------------
+lang_encoder           52.78 M        52.78 M
+point_encoder          24.32 M        22.52 M
+unified_encoder        22.06 M        22.06 M
+ground_head             1.89 M         1.89 M
+qa_head                 8.39 M         8.39 M
+pretrain_head          24.36 M        24.36 M
+caption_head            3.85 M         3.85 M
+cg_head                 3.84 M         3.84 M
+fg_head                 3.25 M         3.25 M
+inference_head          4.14 M         4.14 M
+sup_head                1.18 M         1.18 M
+---------------------------------------------
+PIPELINE              150.07 M       148.28 M
+[INFO] 'eval_task' is True. Running evaluation only and then exiting.
+start evaluation on test set
+[Profiler-epoch0] ≈ 19.66 GMACs (39.33 GFLOPs) per forward
+
+-------------------- Epoch 00 --------------------
+[test] target_metric 0.22288770053475937
+[test] og_acc 0.050481283422459895
+[test] txt_acc 0.6750802139037433
+[test] obj_cls_raw_acc 0.6563862206328963
+[test] obj_cls_pre_acc 0.6306449806191814
+[test] obj_cls_post_acc 0.6833027244980822
+[test] ans1_acc 0.22288770053475937
+[test] ans10_acc 0.5219251336898396
+[test] cg_sum 2.7662093577681377
+[test] cg_acc 0.7574320358691369
+[test] cg_prec 0.7013696810204715
+[test] cg_recall 0.6609587605016675
+[test] cg_f1 0.6464488748122346
+[test] cg_actual_positive 12.441711229946524
+[test] cg_predicted_positive 11.07144385026738
+[test] cg_true_positive 7.717219251336898
+[test] cg_total 32.90609625668449
+[test] fg_sum 2.5095923968336797
+[test] fg_acc 0.9007674199533973
+[test] fg_prec 0.5360850672344154
+[test] fg_recall 0.5576020987459364
+[test] fg_f1 0.5151377947971145
+[test] fg_actual_positive 2.5542245989304813
+[test] fg_predicted_positive 2.6802139037433155
+[test] fg_true_positive 1.3174331550802139
+[test] fg_total 32.90609625668449
+[test] infer_sum 2.371156450347467
+[test] infer_acc 0.9024217528614769
+[test] infer_prec 0.4891655646192836
+[test] infer_recall 0.5121144973745639
+[test] infer_f1 0.46745461901878926
+[test] infer_actual_positive 2.268235294117647
+[test] infer_predicted_positive 2.3189304812834224
+[test] infer_true_positive 1.0502673796791444
+[test] infer_total 32.90609625668449
+--------------------------------------------------
+saving eval json
+End time: Thu Jun 12 17:40:25 CST 2025
