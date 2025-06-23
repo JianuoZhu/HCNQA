@@ -11,6 +11,12 @@ README – last update: 2025-06-23
   </a>
 </p>
 
+<p align="center">
+  <img src="imhs/HCNQA.png"
+       alt="HCNQA architecture overview"
+       width="85%">
+</p>
+
 > **TL;DR** HCNQA introduces a *three-phase Hierarchical Concentration Narrowing (HCN) supervision* strategy for 3D Visual Question Answering.  
 > By explicitly supervising **coarse grounding → fine grounding → inference**, our model suppresses shortcut cues and achieves **+1.1 EM@1** and **+2.3 CIDEr** on ScanQA (*test w/ obj*) versus the previous state-of-the-art.
 
@@ -47,4 +53,5 @@ python run.py --config project/vista/scanqa_eval.yml
 ## 4 License & Acknowledgements
 This repository is released under the MIT License (see LICENSE).
 The whole codebase **inherits heavily from the open-sourced
-<a href="https://github.com/3d-vista/3D-VisTA">3D-VisTA project</a>; we gratefully acknowledge their clean design and utilities.
+<a href="https://github.com/3d-vista/3D-VisTA">3D-VisTA project</a>; 
+we gratefully acknowledge their clean design and utilities.
