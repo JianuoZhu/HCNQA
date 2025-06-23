@@ -12,7 +12,7 @@ README – last update: 2025-06-23
 </p>
 
 <p align="center">
-  <img src="imhs/HCNQA.png"
+  <img src="imgs/HCNQA.png"
        alt="HCNQA architecture overview"
        width="85%">
 </p>
