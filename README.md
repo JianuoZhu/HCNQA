@@ -52,6 +52,8 @@ python run.py --config project/vista/scanqa_eval.yml
 
 ## 4 License & Acknowledgements
 This repository is released under the MIT License (see LICENSE).
-The whole codebase **inherits heavily from the open-sourced
+
+The whole codebase inherits heavily from the open-sourced
 <a href="https://github.com/3d-vista/3D-VisTA">3D-VisTA project</a>; 
+
 we gratefully acknowledge their clean design and utilities.
