@@ -71,13 +71,15 @@ We gratefully acknowledge their clean design and utilities.
 If you find this project useful in your research, please consider citing:
 
 ```bib
-@misc{zhou2025hcnqaenhancing3dvqa,
-      title={HCNQA: Enhancing 3D VQA with Hierarchical Concentration Narrowing Supervision}, 
-      author={Shengli Zhou and Jianuo Zhu and Qilin Huang and Fangjing Wang and Yanfu Zhang and Feng Zheng},
-      year={2025},
-      eprint={2507.01800},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2507.01800}, 
+@InProceedings{10.1007/978-3-032-04546-1_3,
+  author="Zhou, Shengli and Zhu, Jianuo and Huang, Qilin and Wang, Fangjing and Zhang, Yanfu and Zheng, Feng",
+  editor="Senn, Walter and Sanguineti, Marcello and Saudargiene, Ausra and Tetko, Igor V. and Villa, Alessandro E. P. and Jirsa, Viktor and Bengio, Yoshua",
+  title="HCNQA: Enhancing 3D VQA with Hierarchical Concentration Narrowing Supervision",
+  booktitle="Artificial Neural Networks and Machine Learning -- ICANN 2025",
+  year="2026",
+  publisher="Springer Nature Switzerland",
+  address="Cham",
+  pages="26--37",
+  isbn="978-3-032-04546-1"
 }
 ```
