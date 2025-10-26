@@ -9,6 +9,9 @@ README – last update: 2025-06-23
   <a href="https://icann2025.org/accepted.html">
     <img src="https://img.shields.io/badge/ICANN-2025-ff69b4.svg" alt="ICANN 2025">
   </a>
+  <a href="https://link.springer.com/chapter/10.1007/978-3-032-04546-1_3">
+    <img src="https://img.shields.io/badge/Paper-Springer-01324b.svg" alt="Springer">
+  </a>
   <a href="https://arxiv.org/abs/2507.01800">
     <img src="https://img.shields.io/badge/Paper-arXiv-red.svg" alt="arXiv">
   </a>
